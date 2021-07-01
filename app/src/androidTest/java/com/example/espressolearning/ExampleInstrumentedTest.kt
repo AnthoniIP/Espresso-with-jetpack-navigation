@@ -1,5 +1,9 @@
 package com.example.espressolearning
 
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.rule.ActivityTestRule
 import org.junit.Rule
@@ -20,6 +24,7 @@ class ExampleInstrumentedTest {
 
     @Test
     fun testLogin() {
+        onView(withText("Aplicativo de Testes")).check(matches(isDisplayed()))
 
     }
 }
